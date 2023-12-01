@@ -13,6 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::post('/users', function() {
+    return response()->json([
+        'users' => [
+        ],
+        'message'=> 'test'
+    ]);
+});
+Route::post('/auth', function() {
+    return response()->json([
+        'you' => 'fuck you',
+        'message'=> 'test'
+    ]);
+});
+
 Route::get('/{any}', function () {
     return view('welcome');
 })->where('any', '.*');
+
+
